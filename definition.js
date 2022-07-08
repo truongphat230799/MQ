@@ -1,4 +1,4 @@
-Blockly.Blocks['mq_get_ppm'] = {
+Blockly.Blocks['mq_get_data'] = {
     init: function() {
       this.jsonInit(
         {
@@ -49,7 +49,7 @@ Blockly.Blocks['mq_get_ppm'] = {
     
   };
   
-  Blockly.Python['mq_get_ppm'] = function(block) {
+  Blockly.Python['mq_get_data'] = function(block) {
     var dropdown_name = block.getFieldValue('NAME');
     var dropdown_name = block.getFieldValue('PARAM');
     Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
