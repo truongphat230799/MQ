@@ -33,9 +33,9 @@ Blockly.Blocks['mq_get_data'] = {
                 [
                   "P2",
                   "pin2"
-                ]
-              ]
-            }
+                ],
+              ],
+            },
           ],
           "output": null,
           "colour": "#6642bf",
