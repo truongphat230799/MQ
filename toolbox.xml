@@ -1,5 +1,6 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
   <category name="Bộ cảm biến MQ" colour="#6642bf" icon="beer">
-    <block type="mq_get_data"/>
+    <block type="mq_get_ppm"/>
+    <block type="mq_get_acohol"/>
   </category>
 </xml>
