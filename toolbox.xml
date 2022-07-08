@@ -1,5 +1,5 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
-  <category name="Thư viện hỗ trợ các cảm biến MQ" colour="#6642bf" icon="beer">
+  <category name="Bộ cảm biến MQ" colour="#6642bf" icon="beer">
     <block type="mq_get_data"/>
   </category>
 </xml>
