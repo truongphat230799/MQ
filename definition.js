@@ -10,7 +10,7 @@ Blockly.Blocks['mq_get_data'] = {
               options: [
                 ["mg/l", "MG/L"],
                 ["ppm", "PPM"],
-                ["adc", "ADC"],
+                ["analog", "ANALOG"],
                 ],
             },
             {
@@ -113,7 +113,7 @@ Blockly.Blocks['mq_get_data'] = {
       code = "mq.get_ppm()";
     else if (dropdown_data == "MG/L")
       code = "mq.get_acohol()";
-    else if (dropdown_data == "ADC")
+    else if (dropdown_data == "ANALOG")
       code = dropdown_name + ".read_analog()";
     // TODO: Change ORDER_NONE to the correct strength.
     return [code, Blockly.Python.ORDER_NONE];
