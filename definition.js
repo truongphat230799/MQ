@@ -2,7 +2,7 @@ Blockly.Blocks['mq_get_data'] = {
     init: function() {
       this.jsonInit(
         {
-          "message0": "đọc giá trị %1 cảm biến chân %2",
+          "message0": "đọc giá trị %1 cảm biến cổng %2",
           args0: [
             {
               type: "field_dropdown",
