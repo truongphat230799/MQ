@@ -3,24 +3,96 @@ Blockly.Blocks['mq_get_data'] = {
       this.jsonInit(
         {
           "message0": "đọc giá trị %1 cảm biến chân %2",
-          "args0": [
+          args0: [
             {
-                "type": "field_dropdown",
-                "name": "PARAM",
-                "option": [
-                    [
-                        "ppm",
-                        "PPM"
-                    ],
-                    [
-                        "mg/l",
-                        "MG/L"
-                    ]
+              type: "field_dropdown",
+              name: "PARAM",
+              options: [
+                ["mg/l", "MG/L"],
+                ["ppm", "PPM"],
+                ],
+            },
+            {
+              "type": "field_dropdown",
+              "name": "pin",
+              "options": [
+                [
+                  "P1",
+                  "pin1"
+                ],
+                [
+                  "P0",
+                  "pin0"
+                ],
+                [
+                  "P4",
+                  "pin4"
+                ],
+                [
+                  "P5",
+                  "pin5"
+                ],
+                [
+                  "P6",
+                  "pin6"
+                ],
+                [
+                  "P7",
+                  "pin7"
+                ],
+                [
+                  "P8",
+                  "pin8"
+                ],
+                [
+                  "P9",
+                  "pin9"
+                ],
+                [
+                  "P10",
+                  "pin10"
+                ],
+                [
+                  "P11",
+                  "pin11"
+                ],
+                [
+                  "P12",
+                  "pin12"
+                ],
+                [
+                  "P13",
+                  "pin13"
+                ],
+                [
+                  "P14",
+                  "pin14"
+                ],
+                [
+                  "P15",
+                  "pin15"
+                ],
+                [
+                  "P16",
+                  "pin16"
+                ],
+                [
+                  "P19",
+                  "pin19"
+                ],
+                [
+                  "P20",
+                  "pin20"
                 ]
-
-            }
-    ]
-           
+              ]
+            },
+          ],
+          "output": null,
+          "colour": "#6642bf",
+          "helpUrl": ""
+        }
+      );
+    },
     getDeveloperVars: function() {
       return ['mq'];
     }
