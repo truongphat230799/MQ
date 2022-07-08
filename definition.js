@@ -2,11 +2,26 @@ Blockly.Blocks['mq_get_data'] = {
     init: function() {
       this.jsonInit(
         {
-          "message0": "đọc giá trị cảm biến chân %1 theo đơn vị %2",
+          "message0": "đọc giá trị %1 cảm biến cổng %2",
           "args0": [
-            {
+                        {
+                "type": "field_dropdown",
+                "name": "PARAM",
+                "option": [
+                    [
+                        "ppm",
+                        "PPM"
+                    ],
+                    [
+                        "mg/l",
+                        "MG/L"
+                    ]
+                ]
+
+            },
+              {
               "type": "field_dropdown",
-              "name": "pin",
+              "name": "PIN",
               "options": [
                 [
                   "P0",
@@ -21,21 +36,6 @@ Blockly.Blocks['mq_get_data'] = {
                   "pin2"
                 ]
               ]
-            },
-            {
-                "type": "field_dropdown",
-                "name": "param",
-                "option": [
-                    [
-                        "ppm",
-                        "PPM"
-                    ],
-                    [
-                        "mg/l",
-                        "MG/L"
-                    ]
-                ]
-
             }
           ],
           "output": null,
@@ -51,8 +51,8 @@ Blockly.Blocks['mq_get_data'] = {
   };
 
   Blockly.Python['mq_get_data'] = function(block) {
-    var dropdown_name = block.getFieldValue('pin');
-    var dropdown_data = block.getFieldValue('param')
+    var dropdown_name = block.getFieldValue('PIN');
+    var dropdown_data = block.getFieldValue('PARAM')
     Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
     Blockly.Python.definitions_['import_i2c'] = 'from machine import Pin';
     Blockly.Python.definitions_['import_mq'] = 'from mq import MQ';
