@@ -17,32 +17,10 @@ Blockly.Blocks['mq_get_data'] = {
                         "MG/L"
                     ]
                 ]
-            },
-            {
-              "type": "field_dropdown",
-              "name": "NAME",
-              "options": [
-                [
-                  "P0",
-                  "pin0"
-                ],
-                [
-                  "P1",
-                  "pin1"
-                ],
-                [
-                  "P2",
-                  "pin2"
-                ],
-              ],
-            },
-          ],
-          "output": null,
-          "colour": "#6642bf",
-          "helpUrl": ""
-        }
-      );
-    },
+
+            }
+    ]
+           
     getDeveloperVars: function() {
       return ['mq'];
     }
