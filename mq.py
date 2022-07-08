@@ -104,7 +104,7 @@ class MQ(object):
 
 
 def mqlib_example():
-    """MQ135 lib example"""
+    """MQ lib example"""
     # setup
     temperature = 30.0
     humidity = 75.0
