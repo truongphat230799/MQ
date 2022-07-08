@@ -1,6 +1,6 @@
 {
-    "name": "Thư viện hỗ trợ các cảm biến MQ",
-    "description": "Bộ cảm biến MQ",
+    "name": "Cảm biến MQx",
+    "description": "Mục mở rộng cho các loại cảm biến MQ2/MQ3/MQ7/MQ9/MQ135",
     "libs": [
         "mq.py"
     ],
