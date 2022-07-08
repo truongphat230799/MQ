@@ -112,7 +112,7 @@ Blockly.Blocks['mq_get_data'] = {
     if (dropdown_data == "PPM")
       code = "mq.get_ppm()";
     else if (dropdown_data == "MG/L")
-      code = "mq.get_acohol()";
+      code = "'{:.3f}'.format(mq.get_acohol())";
     else if (dropdown_data == "ANALOG")
       code = dropdown_name + ".read_analog()";
     // TODO: Change ORDER_NONE to the correct strength.
