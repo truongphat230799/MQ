@@ -3,7 +3,7 @@ import time
 from machine import ADC, Pin
 
 class MQ(object):
-    """ Class for dealing with MQ13 Gas Sensors """
+    """ Class for dealing with MQ Sensors """
     # The load resistance on the board
     RLOAD = 22000 # 10.0
     # Calibration resistance at atmospheric CO2 level
