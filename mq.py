@@ -104,7 +104,7 @@ class MQ(object):
         return math.pow(x,-1.504)
 
     
-    def mqlib_example():
+def mqlib_example():
     """MQ lib example"""
     # setup
     temperature = 30.0
