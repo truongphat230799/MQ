@@ -5,9 +5,9 @@ from machine import ADC, Pin
 class MQ(object):
     """ Class for dealing with MQ Sensors """
     # The load resistance on the board
-    RLOAD = 10000 # 10.0
+    RLOAD = 22000 # 10.0
     # Calibration resistance at atmospheric CO2 level
-    RZERO = 800 #76.63 #
+    RZERO = 41763  #76.63 #
     # Parameters for calculating ppm of CO2 from sensor resistance
     PARA = 116.6020682
     PARB = 2.8 #2.769034857
@@ -93,7 +93,7 @@ class MQ(object):
             return 4000
         
         volt_sensor = (value / 4095) * 3.3
-        return (3.3 * self.RLOAD / volt_sensor) - self.RLOAD
+        return (3.3 * 10000 / volt_sensor) - 10000
 
     def get_acohol(self):
         """Returns the resistance RZero of the sensor (in kOhms) for calibration purposes
