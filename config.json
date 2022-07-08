@@ -1,5 +1,5 @@
 {
-    "name": "MQ",
+    "name": "Thư viện hỗ trợ các cảm biến MQ",
     "description": "Mục mở rộng dành cho bộ cảm biến MQ",
     "libs": [
         "mq.py"
