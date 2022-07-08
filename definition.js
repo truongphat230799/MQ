@@ -101,7 +101,7 @@ Blockly.Blocks['mq_get_data'] = {
   
   Blockly.Python['mq_get_data'] = function(block) {
     var dropdown_name = block.getFieldValue('pin');
-    var dropdown_name = block.getFieldValue('PARAM');
+    var dropdown_data = block.getFieldValue('PARAM');
     Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
     Blockly.Python.definitions_['import_i2c'] = 'from machine import Pin';
     Blockly.Python.definitions_['import_mq'] = 'from mq import MQ';
