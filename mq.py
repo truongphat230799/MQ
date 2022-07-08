@@ -3,11 +3,11 @@ import time
 from machine import ADC, Pin
 
 class MQ(object):
-    """ Class for dealing with MQ Sensors """
+    """ Class for dealing with MQ13 Gas Sensors """
     # The load resistance on the board
     RLOAD = 22000 # 10.0
     # Calibration resistance at atmospheric CO2 level
-    RZERO = 41763  #76.63 #
+    RZERO = 41763 #76.63 #
     # Parameters for calculating ppm of CO2 from sensor resistance
     PARA = 116.6020682
     PARB = 2.8 #2.769034857
@@ -78,6 +78,7 @@ class MQ(object):
         """Returns the resistance RZero of the sensor (in kOhms) for calibration purposes
         corrected for temperature/humidity"""
         return self.get_corrected_resistance(temperature, humidity) * math.pow((self.ATMOCO2/self.PARA), (1./self.PARB))
+
     def get_resistance_acohol(self):
         """Returns the resistance of the sensor in kOhms // -1 if not value got in pin"""
         adc = ADC(self.pin)
@@ -102,4 +103,30 @@ class MQ(object):
         x = 0.3934 * ratio
         return math.pow(x,-1.504)
 
+    
+    def mqlib_example():
+    """MQ lib example"""
+    # setup
+    temperature = 30.0
+    humidity = 75.0
+    
+    global pin2
+
+    mq = MQ(Pin(pin2.adc_pin)) # analog PIN
+
+    # loop
+    while True:
+        rzero = mq135.get_rzero()
+        corrected_rzero = mq.get_corrected_rzero(temperature, humidity)
+        resistance = mq.get_resistance()
+        ppm = mq.get_ppm()
+        corrected_ppm = mq.get_corrected_ppm(temperature, humidity)
+
+        print("MQ RZero: " + str(rzero) +"\t Corrected RZero: "+ str(corrected_rzero)+
+              "\t Resistance: "+ str(resistance) +"\t PPM: "+str(ppm)+
+              "\t Corrected PPM: "+str(corrected_ppm)+"ppm")
+        time.sleep(1)
+
+if __name__ == "__main__":
+    mqlib_example()
 
