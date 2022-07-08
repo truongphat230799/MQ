@@ -107,7 +107,7 @@ Blockly.Blocks['mq_get_data'] = {
     Blockly.Python.definitions_['import_mq'] = 'from mq import MQ';
     Blockly.Python.definitions_["import_create_mq"] = 'mq = MQ(Pin(' + dropdown_name + '.adc_pin)) # analog PIN';
     // TODO: Assemble Python into code variable.
-    var code = '';
+    var code = "";
     if (dropdown_data == "PPM")
       code = "mq.get_ppm()";
     else
