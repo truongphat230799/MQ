@@ -59,7 +59,7 @@ Blockly.Blocks['mq_get_data'] = {
     Blockly.Python.definitions_["import_create_mq3"] = 'mq = MQ(Pin(' + dropdown_name + '.adc_pin)) # analog PIN';
     // TODO: Assemble Python into code variable.
     var code = '';
-    if (dropdown_data == 'ppm')
+    if (dropdown_data == 'PPM')
         code = "mq.get_ppm()";
     else
         code = "'{:.3f}'.format(mq.get_acohol())";
